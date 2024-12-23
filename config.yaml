@@ -1,0 +1,20 @@
+scientists:
+  - Albert Einstein
+  - Isaac Newton
+  - Marie Curie
+  - Charles Darwin
+
+wikipedia:
+  base_url: https://en.wikipedia.org/wiki/
+
+selectors:
+  dates: css:#mw-content-text > div.mw-parser-output > table.infobox.biography.vcard > tbody > tr
+  paragraphs: css:#mw-content-text > div.mw-parser-output > p
+
+regex_patterns:
+  birth_date: Born.*?(\d{1,2} \w+ \d{4})
+  death_date: Died (\d{1,2} \w+ \d{4})
+
+date_format: D MMMM YYYY
+
+encoding: cp1252
